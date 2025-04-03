@@ -116,4 +116,14 @@ SELECT * FROM Teacher
 
 <br/>
 
+Returns the entire Teacher table, sorted by the FullName A-Z 
+
+```sh
+SELECT *
+FROM Teacher
+ORDER by FullName 
+```
+
+<br/>
+
 </details>
