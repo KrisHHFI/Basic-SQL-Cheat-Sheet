@@ -129,39 +129,6 @@ VALUES
 
 
 <details>
-<summary>JOIN</summary>
-
-<br/>
-
-The JOIN statement is used to join tables together.
-
-<br/>
-
-
-```sh
-SELECT 
-    Student.StudentID, 
-    Student.StudentName, 
-    Teacher.TeacherID, 
-    Teacher.TeacherName
-FROM Student
-INNER JOIN Teacher ON Student.TeacherID = Teacher.TeacherID;
-
-```
-
-<br/>
-
-The statement below is commented out, so it wont be executed
-```sh
--- SELECT * FROM Teachers
-```
-
-<br/>
-
-</details>
-
-
-<details>
 <summary>SELECT</summary>
 
 <br/>
@@ -205,6 +172,20 @@ SELECT *
 FROM Student
 WHERE TeacherID = 5
 ```
+<br/>
+
+The SELECT and INNER JOIN statement is used to view the data of multiple tables. The statement below does not show students don't have a teacher, due to the nature of INNER JOIN.
+
+```sh
+SELECT 
+    Student.StudentID, 
+    Student.StudentName, 
+    Teacher.TeacherID, 
+    Teacher.TeacherName
+FROM Student
+INNER JOIN Teacher ON Student.TeacherID = Teacher.TeacherID;
+```
+
 <br/>
 
 </details>
