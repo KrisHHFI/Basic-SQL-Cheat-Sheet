@@ -153,6 +153,13 @@ FROM Teacher
 ORDER by FullName 
 ```
 
+Returns the entire Student table, sorted by the TeacherID 
+
+```sh
+SELECT *
+FROM Student
+ORDER by TeacherID
+```
 <br/>
 
 </details>
