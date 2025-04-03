@@ -55,6 +55,26 @@ CREATE TABLE Teacher (
 
 
 <details>
+<summary>DROP</summary>
+
+<br/>
+
+The DROP command is used to delete tables.
+
+<br/>
+
+Deletes the Teacher table
+
+```sh
+DROP TABLE Teacher;
+```
+
+<br/>
+
+</details>
+
+
+<details>
 <summary>SELECT</summary>
 
 <br/>
