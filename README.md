@@ -75,6 +75,31 @@ DROP TABLE Teacher;
 
 
 <details>
+<summary>INSERT</summary>
+
+<br/>
+
+The INSERT command is used to insert data into tables.
+
+<br/>
+
+Five rows are inserted into the Teacher table. Each row has a FullName value.
+
+```sh
+INSERT INTO Teacher (FullName)
+VALUES 	('John Black'),
+		('Jussi Blue'),
+		('Sarah White'),
+		('Karin Grey'),
+		('Gary Green');
+```
+
+<br/>
+
+</details>
+
+
+<details>
 <summary>SELECT</summary>
 
 <br/>
