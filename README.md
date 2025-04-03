@@ -59,6 +59,18 @@ CREATE TABLE Teacher (
     TeacherName VARCHAR(50) NOT NULL
 );
 ```
+<br/>
+
+A Student table is created, with the TeacherID linking it as a foreign key to the Teacher table
+
+```sh
+CREATE TABLE Student (
+    StudentID INT AUTO_INCREMENT PRIMARY KEY,
+    StudentName VARCHAR(50) NOT NULL,
+    TeacherID INT,
+    FOREIGN KEY (TeacherID) REFERENCES Teacher(TeacherID) ON DELETE SET NULL
+);
+```
 
 <br/>
 
