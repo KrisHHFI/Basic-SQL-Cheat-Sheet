@@ -51,7 +51,7 @@ CREATE TABLE Teacher (
 
 <br/>
 
-A Teacher table is created with a auto incrementing ID column and a FullName column. When a new row is added, it will be assigned an ID which will be 1 higher than the previously highest ID
+A Teacher table is created with a auto incrementing ID column and a FullName column. When a new row is inserted, it will be assigned an ID which will be 1 higher than the previously highest ID
 
 ```sh
 CREATE TABLE Teacher (
