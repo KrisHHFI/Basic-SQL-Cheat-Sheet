@@ -3,17 +3,70 @@
 ## Syntax
 
 <details>
+<summary>Comment</summary>
+
+<br/>
+
+Comments can be used to add descriptive notes to the SQL. Comments are not executed.
+
+<br/>
+
+```sh
+-- This is a single line comment
+
+/*
+This is a multiline comment
+*/
+```
+
+<br/>
+
+The statement below is commented out, so it wont be executed
+```sh
+-- SELECT * FROM Teachers
+```
+
+<br/>
+
+</details>
+
+
+<details>
 <summary>CREATE</summary>
 
 <br/>
 
 The CREATE command is used to create tables.
 
+<br/>
+
+A Teacher table is created with a FullName column. The FullNames are defined as characters with a length of up to 50.
+
 ```sh
-CREATE TABLE Teachers (
+CREATE TABLE Teacher (
 	FullName varchar(50),
 	PRIMARY KEY (FullName)
 );
+```
+
+<br/>
+
+</details>
+
+
+<details>
+<summary>SELECT</summary>
+
+<br/>
+
+The SELECT command is used to view the data inside tables.
+
+<br/>
+
+Returns the entire Teacher table, including the column names and all the data inside.
+
+```sh
+SELECT * FROM Teacher
 ```
 
 <br/>
