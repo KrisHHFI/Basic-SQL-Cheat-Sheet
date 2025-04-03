@@ -107,6 +107,24 @@ VALUES 	('John Black'),
 
 <br/>
 
+Students are inserted into the Student table. Each student row has a FullName value and a TeacherID (which references their teacher).
+```sh
+INSERT INTO Student (FullName, TeacherID)
+VALUES 
+    ('Alice Brown', 2),  
+    ('Bob Gray', 4),     
+    ('Charlie Black', 1),
+    ('Diana Green', 5),  
+    ('Eva White', 3),    
+    ('Frank Blue', 4),   
+    ('Grace Yellow', 2), 
+    ('Hannah Purple', 1),
+    ('Iris Red', 5),     
+    ('Jack Orange', 3);  
+```
+
+<br/>
+
 </details>
 
 
