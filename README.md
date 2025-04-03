@@ -40,23 +40,23 @@ The CREATE command is used to create tables.
 
 <br/>
 
-A Teacher table is created with a FullName column. The FullNames are defined as characters with a length of up to 50.
+A Teacher table is created with a TeacherName column. The TeacherNames are defined as characters with a length of up to 50.
 
 ```sh
 CREATE TABLE Teacher (
-	FullName varchar(50),
-	PRIMARY KEY (FullName)
+	TeacherName varchar(50),
+	PRIMARY KEY (TeacherName)
 );
 ```
 
 <br/>
 
-A Teacher table is created with a auto incrementing ID column and a FullName column. When a new row is inserted, it will be assigned an ID which will be 1 higher than the previously highest ID
+A Teacher table is created with a auto incrementing ID column and a TeacherName column. When a new row is inserted, it will be assigned an ID which will be 1 higher than the previously highest ID
 
 ```sh
 CREATE TABLE Teacher (
     TeacherID INT AUTO_INCREMENT PRIMARY KEY,
-    FullName VARCHAR(50) NOT NULL
+    TeacherName VARCHAR(50) NOT NULL
 );
 ```
 
@@ -94,10 +94,10 @@ The INSERT command is used to insert data into tables.
 
 <br/>
 
-Five rows are inserted into the Teacher table. Each row has a FullName value.
+Five rows are inserted into the Teacher table. Each row has a TeacherName value.
 
 ```sh
-INSERT INTO Teacher (FullName)
+INSERT INTO Teacher (TeacherName)
 VALUES 	('John Black'),
 		('Jussi Blue'),
 		('Sarah White'),
@@ -107,9 +107,9 @@ VALUES 	('John Black'),
 
 <br/>
 
-Students are inserted into the Student table. Each student row has a FullName value and a TeacherID (which references their teacher).
+Students are inserted into the Student table. Each student row has a StudentName value and a TeacherID (which references their teacher).
 ```sh
-INSERT INTO Student (FullName, TeacherID)
+INSERT INTO Student (StudentName, TeacherID)
 VALUES 
     ('Alice Brown', 2),  
     ('Bob Gray', 4),     
@@ -121,6 +121,39 @@ VALUES
     ('Hannah Purple', 1),
     ('Iris Red', 5),     
     ('Jack Orange', 3);  
+```
+
+<br/>
+
+</details>
+
+
+<details>
+<summary>JOIN</summary>
+
+<br/>
+
+The JOIN statement is used to join tables together.
+
+<br/>
+
+
+```sh
+SELECT 
+    Student.StudentID, 
+    Student.StudentName, 
+    Teacher.TeacherID, 
+    Teacher.TeacherName
+FROM Student
+INNER JOIN Teacher ON Student.TeacherID = Teacher.TeacherID;
+
+```
+
+<br/>
+
+The statement below is commented out, so it wont be executed
+```sh
+-- SELECT * FROM Teachers
 ```
 
 <br/>
@@ -145,12 +178,12 @@ SELECT * FROM Teacher
 
 <br/>
 
-Returns the entire Teacher table, sorted by the FullName A-Z 
+Returns the entire Teacher table, sorted by the TeacherName A-Z 
 
 ```sh
 SELECT *
 FROM Teacher
-ORDER by FullName 
+ORDER by TeacherName 
 ```
 
 <br/>
