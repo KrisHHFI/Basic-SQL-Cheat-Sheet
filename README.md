@@ -185,6 +185,19 @@ SELECT
 FROM Student
 INNER JOIN Teacher ON Student.TeacherID = Teacher.TeacherID;
 ```
+<br/>
+
+The statement below is similar to the one above. However, this statement prints all students, even if they have no assigned teacher.
+
+```sh
+SELECT 
+    Student.StudentID, 
+    Student.StudentName, 
+    Teacher.TeacherID, 
+    Teacher.TeacherName
+FROM Student
+LEFT JOIN Teacher ON Student.TeacherID = Teacher.TeacherID;
+```
 
 <br/>
 
